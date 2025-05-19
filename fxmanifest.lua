@@ -2,7 +2,7 @@ fx_version 'cerulean'
 games { 'gta5' }
 lua54 "yes"
 author 'ANTUNES'
-description 'Karma Developments RepairSkill Minigame'
+description 'RepairSkill Minigame'
 
 ui_page 'RepairKit.html'
 
