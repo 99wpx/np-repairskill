@@ -1,0 +1,134 @@
+@import "https://assets.nopixel.net/web/fonts/gilroy/stylesheet.css";
+
+body {
+  font-family: "Gilroy";
+  overflow: hidden;
+  position: relative;
+  /* background: linear-gradient(rgba(21, 27, 48, 0.97), rgba(21, 27, 48, 0.97)), url(https://i.pinimg.com/originals/05/9c/6f/059c6f6f28f86e82367da81344f89206.png); */
+  background-size: cover;
+}
+
+.hacking-container {
+  display: none;
+  position: relative;
+  background: linear-gradient(to right, rgb(18, 19, 20), rgb(36, 68, 90));
+  padding: 1.5vw;
+  border-radius: 1vw;
+  width: 40vw;
+  height: 2.8vw;
+  top: 85vh;
+  left: 50vw;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.button-press {
+  display: inline-block;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 0.1vw;
+  background: radial-gradient(circle, rgb(0, 183, 140), rgb(0, 81, 61));
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1.5vw;
+  color: white;
+  position: relative;
+  top: -0.25vw;
+}
+
+.timeline {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 36.5vw;
+  height: 2.5vw;
+  margin-left: 4vw;
+  border-radius: 0.5vw;
+  outline: 0.2vw solid rgba(128, 128, 128, 0.162);
+}
+
+.moving-square {
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 0.1vw;
+  background: radial-gradient(circle, rgb(0, 255, 200), rgb(0, 174, 130));
+  box-shadow: 0 0 0.25vw 0px rgb(16, 239, 191);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 1.5vw;
+  color: white;
+  margin-left: 0.1vw;
+  transition: margin-left 0.05s linear, scale 0.3s ease-in-out;
+}
+
+.square-slot {
+  display: none;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 0.1vw;
+  outline: 0.075vw solid rgba(128, 128, 128, 0.354);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  color: white;
+  margin-left: 3.75vw; /* Ranges from 3.75-23.5vw when randomizing */
+}
+
+.square-slot::before,
+.square-slot::after {
+  content: "";
+  position: absolute;
+  width: 2vw;
+  height: 0.15vw;
+  background: var(--background-gradient);
+}
+
+.square-slot::before {
+  top: -0.1vw; /* Adjust the margin-top as needed */
+}
+
+.square-slot::after {
+  bottom: -0.1vw; /* Adjust the margin-bottom as needed */
+}
+
+.other-container {
+  display: none;
+  align-items: left;
+  justify-content: left;
+  gap: 1vw;
+  margin-top: 1vw;
+}
+
+.home-button {
+  background-color: #3292ec;
+  border-radius: 10vw;
+  box-shadow: rgba(37, 138, 227, 0.2) 0 -2.5vw 1.8vw -1.4vw inset,
+    rgba(37, 138, 227, 0.2) 0 0.1vw 0.2vw, rgba(37, 138, 227, 0.2) 0 0.2vw 0.4vw,
+    rgba(37, 138, 227, 0.2) 0 0.4vw 0.8vw, rgba(37, 138, 227, 0.2) 0 0.8vw 1.6vw,
+    rgba(37, 138, 227, 0.2) 0 1.6vw 3.2vw;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 1vw 2vw;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 1.6vw;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.home-button:hover {
+  box-shadow: rgba(72, 147, 233, 0.35) 0 -2.5vw 1.8vw -1.4vw inset,
+    rgba(72, 147, 233, 0.35) 0 0.1vw 0.2vw,
+    rgba(72, 147, 233, 0.35) 0 0.2vw 0.4vw,
+    rgba(72, 147, 233, 0.35) 0 0.4vw 0.8vw,
+    rgba(72, 147, 233, 0.35) 0 0.8vw 1.6vw,
+    rgba(72, 147, 233, 0.35) 0 1.6vw 3.2vw;
+  transform: scale(1.05) rotate(-1deg);
+}
